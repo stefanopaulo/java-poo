@@ -14,6 +14,7 @@ public class Account {
 	public void openAccount(String type) {
 		if (this.getStatus()) {
 			System.out.println("Essa conta já está aberta!");
+			System.out.println();
 		} else {
 			this.setStatus(true);
 			this.setType(type);
@@ -38,10 +39,12 @@ public class Account {
 				withdraw(this.getBalance());
 				System.out.println("Conta fechada.");
 				this.setStatus(false);
+				System.out.println();
 			}
 			
 			if (this.getBalance() < 0) {
 				System.out.println("A conta está com saldo negativo! Deposite R$ " + (-1 * this.getBalance()) + " para prosseguir.");
+				System.out.println();
 			}
 		}
 	}
@@ -51,6 +54,7 @@ public class Account {
 			this.setBalance(this.getBalance() + value);
 		} else {
 			System.out.println("Essa conta está fechada!");
+			System.out.println();
 		}
 	}
 	
@@ -60,9 +64,11 @@ public class Account {
 				this.setBalance(this.getBalance() - value);
 			} else {
 				System.out.println("Não é possível realizar o saque para este valor.");
+				System.out.println();
 			}
 		} else {
 			System.out.println("Essa conta está fechada!");
+			System.out.println();
 		}
 	}
 	
@@ -77,6 +83,7 @@ public class Account {
 			}
 		} else {
 			System.out.println("Essa conta está fechada!");
+			System.out.println();
 		}
 	}
 	
