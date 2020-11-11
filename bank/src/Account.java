@@ -80,6 +80,19 @@ public class Account {
 		}
 	}
 	
+	public void print() {
+		System.out.println("Dados da conta:");
+		System.out.println("Dono(a): " + this.getOwner());
+		System.out.println("Número: " + this.getAccountNumber());
+		System.out.println("Saldo: " + this.getBalance());
+		if (this.getStatus()) {
+			System.out.println("Status: ABERTA");
+		} else {
+			System.out.println("Status: FECHADA");
+		}
+		System.out.println();
+	}
+	
 	public int getAccountNumber() {
 		return accountNumber;
 	}
