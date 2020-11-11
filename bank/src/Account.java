@@ -19,11 +19,11 @@ public class Account {
 			this.setStatus(true);
 			this.setType(type);
 			
-			if (type == "cc") {
+			if (type == "CC") {
 				this.setBalance(50.0);
 			}
 			
-			if (type == "cp") {
+			if (type == "CP") {
 				this.setBalance(150.0);
 			}
 		}
@@ -78,11 +78,11 @@ public class Account {
 	
 	public void annuity() {
 		if (this.getStatus()) {
-			if (this.getType() == "cc") {
+			if (this.getType() == "CC") {
 				this.setBalance(this.getBalance() - 12);
 			}
 			
-			if (this.getType() == "cp") {
+			if (this.getType() == "CP") {
 				this.setBalance(this.getBalance() - 20);
 			}
 		} else {
@@ -95,6 +95,7 @@ public class Account {
 		System.out.println("Dados da conta:");
 		System.out.println("Dono(a): " + this.getOwner());
 		System.out.println("Número: " + this.getAccountNumber());
+		System.out.println("Tipo: " + this.getType());
 		System.out.println("Saldo: " + this.getBalance());
 		if (this.getStatus()) {
 			System.out.println("Status: ABERTA");
