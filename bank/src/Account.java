@@ -52,6 +52,8 @@ public class Account {
 	public void deposit(double value) {
 		if (this.getStatus()) {
 			this.setBalance(this.getBalance() + value);
+			System.out.println("Depósito realizado com sucesso!");
+			System.out.println();
 		} else {
 			System.out.println("Essa conta está fechada!");
 			System.out.println();
@@ -62,6 +64,8 @@ public class Account {
 		if (this.getStatus()) {
 			if (this.getBalance() >= value) {
 				this.setBalance(this.getBalance() - value);
+				System.out.println("Saque realizado com sucesso!");
+				System.out.println();
 			} else {
 				System.out.println("Não é possível realizar o saque para este valor.");
 				System.out.println();
