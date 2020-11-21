@@ -9,7 +9,7 @@ public class Main {
 		b1.details();
 		
 		b1.open();
-		b1.flipThrough(200);
+		b1.flipThrough(100);
 		b1.advancePage();
 		b1.advancePage();
 		b1.backPage();
